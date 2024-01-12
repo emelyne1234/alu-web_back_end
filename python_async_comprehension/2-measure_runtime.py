@@ -2,7 +2,6 @@
 """ runtime for four parallel comprehensions """
 import asyncio
 import time
-import uniform
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
