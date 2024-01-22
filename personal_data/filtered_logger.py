@@ -3,6 +3,9 @@
 from typing import List
 import re
 import logging
+from os import environ
+
+PII_FIELDS = ("name", "email", "phone", "ssn", "password")
 
 
 class RedactingFormatter(logging.Formatter):
@@ -30,6 +33,7 @@ def filter_datum(fields: List[str], redaction: str, message: str,
         message = re.sub(f'{field}=(.*?){separator}',
                          f'{field}={redaction}{separator}', message)
     return message
+
 
 def get_logger() -> logging.Logger:
     '''returns logger'''
