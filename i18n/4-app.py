@@ -3,6 +3,8 @@
 
 from flask import Flask, request, render_template
 from flask_babel import Babel, gettext
+from os import getenv
+
 
 app = Flask(__name__)
 babel = Babel(app)
