@@ -6,4 +6,4 @@ from pymongo import MongoClient
 def insert_school(mongo_collection, **kwargs):
     """inserts a new document in the collection"""
     new_document = mongo_collection.insert_one(kwargswargs)
-    return new_document.inserted_id
+    new_document.inserted_id
