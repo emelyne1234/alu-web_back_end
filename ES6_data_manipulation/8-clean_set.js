@@ -1,4 +1,5 @@
-const cleanSet = (set, string) => { if (!string || !string.length) return '';
+const cleanSet = (set, string) => {
+  if (!string || !string.length) return '';
   let value = '';
   for (const el of set) {
     if (el && el.startsWith(string)) {
