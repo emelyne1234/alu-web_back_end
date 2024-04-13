@@ -1,17 +1,17 @@
-const fs = require("fs");
+const fs = require('fs');
 
 function readDatabase(path) {
   return new Promise((resolve, reject) => {
-    fs.readFile(path, "utf8", (err, data) => {
+    fs.readFile(path, 'utf8', (err, data) => {
       if (err) {
         reject(Error(err));
         return;
       }
-      const content = data.toString().split("\n");
+      const content = data.toString().split('\n');
 
       let students = content.filter((item) => item);
 
-      students = students.map((item) => item.split(","));
+      students = students.map((item) => item.split(','));
 
       const fields = {};
       for (const i in students) {
